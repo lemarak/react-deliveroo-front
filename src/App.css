@@ -158,6 +158,11 @@ body {
   cursor: pointer;
 }
 
+.empty {
+  padding: 24px;
+  text-align: center;
+  color: #868a8a;
+}
 .article {
   margin: 0 10px;
   display: flex;

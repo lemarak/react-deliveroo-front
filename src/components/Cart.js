@@ -30,7 +30,7 @@ const Cart = ({ articles, setArticles }) => {
       {/* List articles */}
       {articlesList}
       {/* Total */}
-      {articles.length > 0 && (
+      {articles.length > 0 ? (
         <div className="total">
           <div className="sous-total">
             <span>Sous-total</span>
@@ -60,6 +60,8 @@ const Cart = ({ articles, setArticles }) => {
             </span>
           </div>
         </div>
+      ) : (
+        <div className="empty">Votre panier est vide</div>
       )}
     </div>
   );
