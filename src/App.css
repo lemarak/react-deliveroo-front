@@ -4,13 +4,10 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-header {
-}
-
-.container {
+/* .container {
   width: 1200px;
   margin: 0 auto;
-}
+} */
 
 .top {
   border-bottom: 1px solid rgb(233, 235, 235);
@@ -48,7 +45,7 @@ header {
 }
 
 .restaurant-img {
-  width: 350;
+  width: 350px;
   height: 198px;
   border-radius: 6px;
 }
@@ -64,7 +61,7 @@ header {
 }
 
 .categories {
-  flex: 3;
+  flex: 2.8;
   display: flex;
   flex-direction: column;
 }
@@ -72,7 +69,9 @@ header {
 .basket {
   flex: 1;
   padding: 20px 0;
+  height: 100%;
 }
+
 .category {
   padding: 20px 0;
 }
@@ -84,12 +83,16 @@ header {
 
 .meal {
   background-color: white;
-  width: calc(45% - 20px);
+  width: calc(45%);
   margin: 30px 30px 30px 0;
   border-radius: 8px;
   display: flex;
   justify-content: space-between;
   padding: 15px;
+}
+
+.meal:hover {
+  box-shadow: 0 22px 24px 0 rgb(46 51 51 / 7%);
 }
 
 .meal h3 {
