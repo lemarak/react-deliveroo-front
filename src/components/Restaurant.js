@@ -9,7 +9,7 @@ const Restaurant = ({ restaurant }) => {
       </div>
       <img
         src={RestaurantImg}
-        alt="Image du restaurant"
+        alt={restaurant.name}
         className="restaurant-img"
       />
     </div>

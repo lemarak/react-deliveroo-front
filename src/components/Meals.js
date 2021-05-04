@@ -3,16 +3,15 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const Meals = ({ meals, className }) => {
   const mealsList = meals.map((meal, index) => {
     return (
-      <div key={index} className="meal">
+      <div key={meal.id} className="meal">
         <div className="meal-content">
           <h3>{meal.title}</h3>{" "}
           <div className="meal-descr">{meal.description}</div>
           <div className="price">
             <span>{meal.price} €</span>
             <span className="populaire">
-              <FontAwesomeIcon icon="star" className="icon" />
-              Populaire
-            </span>{" "}
+              <FontAwesomeIcon icon="star" className="icon" /> Populaire
+            </span>
           </div>
         </div>
 
