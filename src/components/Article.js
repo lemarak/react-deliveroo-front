@@ -9,8 +9,15 @@ const Article = ({ article, index, articles, setArticles }) => {
         articles={articles}
         setArticles={setArticles}
       />
-      <div>{article.title}</div>
-      <span>{article.price * article.qt}</span>
+      <div className="detail-article">
+        <div>{article.title}</div>
+        <span>
+          {Number(
+            (article.price * article.qt).toFixed(2)
+          ).toLocaleString("fr-FR", { minimumFractionDigits: 2 })}{" "}
+          €
+        </span>
+      </div>
     </div>
   );
 };

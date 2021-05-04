@@ -17,22 +17,15 @@ library.add(faStar, faPlusCircle, faMinusCircle);
 function App() {
   const [data, setData] = useState();
   const [isLoading, setIsLoading] = useState(true);
-  const [articles, setArticles] = useState([
-    {
-      id: "1519055545-91",
-      title: "Fromage blanc bio au miel",
-      qt: 1,
-      price: 10.5,
-    },
-  ]);
+  const [articles, setArticles] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:3100/");
-        // const response = await axios.get(
-        //   "https://hidden-coast-18862.herokuapp.com/"
-        // );
+        // const response = await axios.get("http://localhost:3100/");
+        const response = await axios.get(
+          "https://hidden-coast-18862.herokuapp.com/"
+        );
         setData(response.data);
         setIsLoading(false);
       } catch (error) {

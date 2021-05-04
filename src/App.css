@@ -158,11 +158,27 @@ header {
 .article {
   margin: 0 10px;
   display: flex;
-  border-bottom: 1px solid #d1d7d7;
+  margin-bottom: 12px;
+}
+
+.detail-article {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.detail-article > span {
+  width: 40%;
+  text-align: right;
 }
 
 .article span {
   color: #2e3333;
+}
+.counter {
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+  margin-right: 6px;
 }
 
 .counter .icon {
@@ -173,4 +189,21 @@ header {
 .counter span {
   margin-right: 4px;
   color: #808484;
+}
+
+.total,
+.total-total {
+  padding: 12px 0;
+  border-top: 1px solid #d1d7d7;
+}
+
+.sous-total,
+.total-total {
+  display: flex;
+  justify-content: space-between;
+  margin: 8px 10px;
+}
+
+.total-total {
+  font-weight: 700;
 }

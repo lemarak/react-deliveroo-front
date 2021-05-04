@@ -1,7 +1,7 @@
 import Article from "./Article";
 
 const Cart = ({ articles, setArticles }) => {
-  console.log("Cart:", articles);
+  const shippingCost = 2.5;
 
   const articlesList = articles.map((article, index) => {
     return (
@@ -14,10 +14,53 @@ const Cart = ({ articles, setArticles }) => {
       />
     );
   });
+
+  const subTotalCard = Number(
+    articles
+      .reduce((acc, article) => acc + parseFloat(article.price * article.qt), 0)
+      .toFixed(2)
+  );
+
   return (
     <div className="basket">
-      <button>Valider mon panier</button>
+      {/* Button */}
+      <button className={articles.length > 0 ? "active" : "inactive"}>
+        Valider mon panier
+      </button>
+      {/* List articles */}
       {articlesList}
+      {/* Total */}
+      {articles.length > 0 && (
+        <div className="total">
+          <div className="sous-total">
+            <span>Sous-total</span>
+            <span>
+              {subTotalCard.toLocaleString("fr-FR", {
+                minimumFractionDigits: 2,
+              })}{" "}
+              €
+            </span>
+          </div>
+          <div className="sous-total">
+            <span>Frais de livraison</span>
+            <span>
+              {Number(shippingCost.toFixed(2)).toLocaleString("fr-FR", {
+                minimumFractionDigits: 2,
+              })}{" "}
+              €
+            </span>
+          </div>
+          <div className="total-total">
+            <span>Total</span>
+            <span>
+              {(subTotalCard + shippingCost).toLocaleString("fr-FR", {
+                minimumFractionDigits: 2,
+              })}{" "}
+              €
+            </span>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

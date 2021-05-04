@@ -7,7 +7,11 @@ const Content = ({ categories, articles, setArticles }) => {
       cat.meals.length > 0 && (
         <div key={index} className="category">
           <h2>{cat.name}</h2>
-          <Meals meals={cat.meals}></Meals>
+          <Meals
+            meals={cat.meals}
+            articles={articles}
+            setArticles={setArticles}
+          ></Meals>
         </div>
       )
     );
