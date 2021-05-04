@@ -23,10 +23,10 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:3100/");
-        // const response = await axios.get(
-        //   "https://hidden-coast-18862.herokuapp.com/"
-        // );
+        // const response = await axios.get("http://localhost:3100/");
+        const response = await axios.get(
+          "https://hidden-coast-18862.herokuapp.com/"
+        );
         setData(response.data);
         setIsLoading(false);
       } catch (error) {
