@@ -32,9 +32,11 @@ const Meals = ({ meals, articles, setArticles }) => {
           <div className="meal-descr">{meal.description}</div>
           <div className="price">
             <span>{meal.price} €</span>
-            <span className="populaire">
-              <FontAwesomeIcon icon="star" className="icon" /> Populaire
-            </span>
+            {meal.popular && (
+              <span className="populaire">
+                <FontAwesomeIcon icon="star" className="icon" /> Populaire
+              </span>
+            )}
           </div>
         </div>
 
