@@ -20,6 +20,16 @@ body {
   align-items: center;
 }
 
+.loading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  color: #00cdbd;
+  height: 100vh;
+}
+
 .logo {
   width: 155px;
   height: 42px;
@@ -138,6 +148,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: stretch;
+  box-shadow: 0 22px 24px 0 rgb(46 51 51 / 7%);
 }
 
 .basket button {

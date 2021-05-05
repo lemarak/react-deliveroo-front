@@ -12,8 +12,11 @@ import {
   faStar,
   faPlusCircle,
   faMinusCircle,
+  faSpinner,
 } from "@fortawesome/free-solid-svg-icons";
-library.add(faStar, faPlusCircle, faMinusCircle);
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+library.add(faStar, faPlusCircle, faMinusCircle, faSpinner);
 
 function App() {
   const [data, setData] = useState();
@@ -37,7 +40,10 @@ function App() {
   }, []);
 
   return isLoading ? (
-    <span>En cours de chargement</span>
+    <div className="loading">
+      <FontAwesomeIcon icon="spinner" className="icon" spin />
+      <span>En cours de chargement</span>
+    </div>
   ) : (
     <div>
       <Header restaurant={data.restaurant} />
